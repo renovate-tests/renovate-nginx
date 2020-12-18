@@ -6,8 +6,6 @@
   "packageRules": [
     {
       "packageNames": ["nginx"],
-      "automerge": false,
-      "updateTypes": ["major", "minor"],
       "extractVersion": "^release-(?<version>\\d+.\\d+)"
     }
   ],
