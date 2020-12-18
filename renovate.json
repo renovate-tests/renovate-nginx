@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      "packageNames": ["nginx"],
+      "automerge": false,
+      "updateTypes": ["major", "minor"],
+      "extractVersion": "^release-(?<version>\\d+.\\d+)"
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^(Dockerfile.*)"],	
+      "matchStrings": ["NGINX_VERSION=(?<currentValue>.*)\n"],	
+      "depNameTemplate": "nginx",
+      "lookupNameTemplate": "nginx/nginx",	
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "regex:^(?:release-)?(?<major>\\d+)?(?:\\.(?<minor>\\d+))?(?:\\.(?<patch>\\d+))$"
+    }
+  ]
+}
