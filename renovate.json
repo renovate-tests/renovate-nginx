@@ -18,7 +18,7 @@
       "depNameTemplate": "nginx",
       "lookupNameTemplate": "nginx/nginx",	
       "datasourceTemplate": "github-tags",
-      "versioningTemplate": "regex:^(?:release-)?(?<major>\\d+)?(?:\\.(?<minor>\\d+))?(?:\\.(?<patch>\\d+))$"
+      "versioningTemplate": "docker"
     }
   ]
 }
