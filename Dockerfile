@@ -1,5 +1,5 @@
 FROM centos:8
-ARG NGINX_VERSION=1.16
+ARG NGINX_VERSION=1.19
 
 RUN yum clean all && yum update -y && yum install -y epel-release && yum module enable -y nginx:${NGINX_VERSION} && yum clean all
 RUN yum install -y wget unzip patch rpm-build yum-utils tar gcc make which git nginx libffi-devel rubygems ruby-devel tree geoip-devel gperftools-devel pcre-devel
